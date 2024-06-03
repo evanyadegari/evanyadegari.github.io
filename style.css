@@ -15,7 +15,35 @@ body {
   align-items: flex-start;
   padding: 20px;
   box-sizing: border-box;
+<<<<<<< HEAD
+  overflow-y: scroll;
   height: 150vh;
+}
+  /* Flex item styling */
+  .flex-item {
+    width: calc(30% - 40px);
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid black; /* Change border color to black */
+    background-color: #003366; /* Change background color to dark blue */
+    color: #fff; /* Change text color to white */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add background-color transition */
+  }
+
+  .flex-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #004080; /* Change background color on hover */
+  }
+
+}
+
+=======
+  height: 150vh; 
   overflow-y: scroll;
 }
 
@@ -31,22 +59,72 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+>>>>>>> adc1c9cf46366509ccba725e6c9154d664f5ad4f
 }
 
 /* Hover effect */
 .flex-item:hover {
+<<<<<<< HEAD
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgb(5, 5, 5, 0.2);
+=======
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background: linear-gradient(135deg, #fad0c4 0%, #ff9a9e 100%);
+>>>>>>> adc1c9cf46366509ccba725e6c9154d664f5ad4f
 }
 
+
 /* Adjust styles for specific flex items */
+<<<<<<< HEAD
+  .flex-item:nth-child(odd) {
+    background-color: #a2d9f9; /* Light blue for odd items */
+  }
+
+  .flex-item:nth-child(even) {
+    background-color: #3498db; /* Dark blue for even items */
+    border-color: #000; /* Black border for even items */
+  }
+
+=======
 .flex-item:nth-child(odd) {
   background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
 }
 
+.flex-item:nth-child(odd):hover {
+  background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%);
+}
+
 .flex-item:nth-child(even) {
   background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+}
+
+.flex-item:nth-child(even):hover {
+  background: linear-gradient(135deg, #ffd1ff 0%, #fad0c4 100%);
+>>>>>>> adc1c9cf46366509ccba725e6c9154d664f5ad4f
+/* Flex item styling */
+.flex-item {
+  width: calc(30% - 40px);
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #fffafa;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;.flex-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}/* Adjust styles for specific flex items */
+.flex-item:nth-child(odd) {
+  background-color: #e0f7fa;
+}
+
+.flex-item:nth-child(even) {
+  background-color: #e1bee7;
+  border-color: #ce93d8;
 }
 
 /* Media Query for responsiveness */
