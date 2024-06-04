@@ -1,63 +1,140 @@
-  /* Reset margins and padding */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-image: linear-gradient(to right, #3498db, #a2d9f9); /* Blue to light blue gradient */
-    color: #333;
-  }
+/* Reset margins and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(to right, #3498db, #a2d9f9); /* Blue to light blue gradient */
+  color: #333;
+}
 
-  /* Flex container styling */
+/* Flex container styling */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 150vh;
+  overflow-y: scroll;
+}
+
+/* Flex item styling */
+.flex-item {
+  width: calc(20% - 40px); /* Adjusted width */
+  margin: 20px;
+  padding: 10px; /* Adjusted padding */
+  box-sizing: border-box;
+  border: 2px solid black; /* Black border */
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Make boxes square */
+.flex-item {
+  height: 0;
+  padding-top: calc(20% - 40px); /* Adjusted padding */
+}
+
+/* Hover effect */
+.flex-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust styles for specific flex items */
+.flex-item:nth-child(odd) {
+  background-color: #e0f7fa;
+}
+
+.flex-item:nth-child(even) {
+  background-color: #e1bee7;
+  border-color: #000; /* Black border */
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
   .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 150vh;
-    overflow-y: scroll;
+    flex-direction: column;
   }
 
-  /* Flex item styling */
   .flex-item {
-    width: calc(30% - 40px);
-    margin: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid #fffafa;
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(40% - 40px); /* Adjusted width for smaller screens */
+    margin: 10px auto; /* Adjusted margin */
+    padding: 10px; /* Adjusted padding */
+  }
+}
+/* Reset margins and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(to right, #3498db, #a2d9f9); /* Blue to light blue gradient */
+  color: #333;
+}
+
+/* Flex container styling */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px; /* Adjusted padding */
+  box-sizing: border-box;
+  height: 100vh; /* Adjusted height */
+  overflow-y: scroll;
+}
+
+/* Flex item styling */
+.flex-item {
+  width: calc(20% - 20px); /* Adjusted width */
+  margin: 10px; /* Adjusted margin */
+  padding: 5px; /* Adjusted padding */
+  box-sizing: border-box;
+  border: 2px solid black; /* Black border */
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Make boxes square */
+.flex-item {
+  height: 0;
+  padding-top: calc(20% - 20px); /* Adjusted padding */
+}
+
+/* Hover effect */
+.flex-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust styles for specific flex items */
+.flex-item:nth-child(odd) {
+  background-color: #e0f7fa; /* Light blue */
+}
+
+.flex-item:nth-child(even) {
+  background-color: #bbdefb; /* Lighter blue */
+  border-color: #000; /* Black border */
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
   }
 
-  /* Hover effect */
-  .flex-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  .flex-item {
+    width: calc(40% - 20px); /* Adjusted width for smaller screens */
+    margin: 10px auto; /* Adjusted margin */
+    padding: 5px; /* Adjusted padding */
   }
-
-  /* Adjust styles for specific flex items */
-  .flex-item:nth-child(odd) {
-    background-color: #e0f7fa;
-  }
-
-  .flex-item:nth-child(even) {
-    background-color: #e1bee7;
-    border-color: #ce93d8;
-  }
-
-  /* Media Query for responsiveness */
-  @media screen and (max-width: 768px) {
-    .flex-container {
-      flex-direction: column;
-    }
-
-    .flex-item {
-      width: calc(100% - 40px);
-      margin: 20px auto;
-    }
-  }
+}
