@@ -1,95 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
   <title>Evan Yadegari</title>
+  <style>
+    /* Centering the search bar */
+    #searchInput {
+      width: 70%; /* Adjust the width as needed */
+      max-width: 400px; /* Limiting the maximum width */
+      margin: 0 auto; /* Centering horizontally */
+      display: block;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 20px; /* Making it rounder */
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
- <p> Evan Yadegari, Max Bressler, and Luca Perna </p>
-  <div class="flex-container">
-    <div class="flex-item" onclick="window.location.href='/test.html';"">1v1.Lol</div>
-    <div class="flex-item" 
-  onclick="window.location.href='/minecraft.html';"">Minecraft</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/BitLife.html';"">BitLife</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/geometry.html';"">
-    Geometry Dash</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/fallguys.html';"">Fall Guys</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/retrobowl.html';"">Retro Bowl</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/driftboss.html';"">Drift Boss</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/blox.html';"">Bloxors</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/slope.html';"">Slope</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/clusterrush.html';"">Cluster Rush</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/clashroyale.html';"">Push Luck</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/deathrun.html';"">Death Run 3D</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/jetpackjoyride.html';"">Jet Pack Joyride</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/crossyroad.html';"">Crossy Road</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/basketballstars.html';"">Basketball Stars</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/ducklife.html';"">Duck Life</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/cuttherope.html';"">Cut The Rope</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/fnaf1.html';"">FNAF 1</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/cookieclicker.html';"">Cookie Clicker</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/bobtherobber.html';"">Bob the Robber</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/baldisbasics.html';"">Baldi's Basics</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/stickmanhook.html';"">Stickman Boost</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/impossiblequiz.html';"">Impossible Quiz</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/vex3.html';"">Vex 3</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/breakingthebank.html';"">Breaking the Bank</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/2048cupcakes.html';"">2048 Cupcakes</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/bubblepopper.html';"">Bubble Popper</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/getawayshootout.html';"">Getaway Shootout</div>
-   <div class="flex-item" 
-    onclick="window.location.href='/ballblast.html';"">Ball Blast</div>
-  <div class="flex-item" 
-    onclick="window.location.href='/worldshardestgame.html';"">Worlds Hardest Game</div>
-  <div class="flex-item" onclick="window.location.href='/pandemic2.html';"">Pandemic 2</div>
-   <div class="flex-item" onclick="window.location.href='/tunnelrush.html';"">Tunnel Rush</div>
-   <div class="flex-item" onclick="window.location.href='/idledice.html';"">Idle Dice</div>
-    <div class="flex-item" onclick="window.location.href='/basketbros.html';">Basket Bros</div>
+  <input type="text" id="searchInput" oninput="searchGames()" placeholder="Search games...">
 
-  <div class="flex-item" onclick="window.location.href='/miningempire.html';"">Mining Empire</div>
-</div>
+  <!-- Your game list here -->
+  <div class="flex-container">
+    <div class="flex-item" onclick="window.location.href='/test.html';">1v1.Lol</div>
+    <div class="flex-item" onclick="window.location.href='/minecraft.html';">Minecraft</div>
+    <div class="flex-item" onclick="window.location.href='/BitLife.html';">BitLife</div>
+    <div class="flex-item" onclick="window.location.href='/geometry.html';">Geometry Dash</div>
+    <div class="flex-item" onclick="window.location.href='/fallguys.html';">Fall Guys</div>
+    <div class="flex-item" onclick="window.location.href='/retrobowl.html';">Retro Bowl</div>
+    <div class="flex-item" onclick="window.location.href='/driftboss.html';">Drift Boss</div>
+    <div class="flex-item" onclick="window.location.href='/blox.html';">Bloxors</div>
+    <div class="flex-item" onclick="window.location.href='/slope.html';">Slope</div>
+    <div class="flex-item" onclick="window.location.href='/clusterrush.html';">Cluster Rush</div>
+    <div class="flex-item" onclick="window.location.href='/clashroyale.html';">Push Luck</div>
+    <div class="flex-item" onclick="window.location.href='/deathrun.html';">Death Run 3D</div>
+    <div class="flex-item" onclick="window.location.href='/jetpackjoyride.html';">Jet Pack Joyride</div>
+    <div class="flex-item" onclick="window.location.href='/crossyroad.html';">Crossy Road</div>
+    <div class="flex-item" onclick="window.location.href='/basketballstars.html';">Basketball Stars</div>
+    <div class="flex-item" onclick="window.location.href='/ducklife.html';">Duck Life</div>
+    <div class="flex-item" onclick="window.location.href='/cuttherope.html';">Cut The Rope</div>
+    <div class="flex-item" onclick="window.location.href='/fnaf1.html';">FNAF 1</div>
+    <div class="flex-item" onclick="window.location.href='/cookieclicker.html';">Cookie Clicker</div>
+    <div class="flex-item" onclick="window.location.href='/bobtherobber.html';">Bob the Robber</div>
+    <div class="flex-item" onclick="window.location.href='/baldisbasics.html';">Baldi's Basics</div>
+    <div class="flex-item" onclick="window.location.href='/stickmanhook.html';">Stickman Boost</div>
+    <div class="flex-item" onclick="window.location.href='/impossiblequiz.html';">Impossible Quiz</div>
+    <div class="flex-item" onclick="window.location.href='/vex3.html';">Vex 3</div>
+    <div class="flex-item" onclick="window.location.href='/breakingthebank.html';">Breaking the Bank</div>
+    <div class="flex-item" onclick="window.location.href='/2048cupcakes.html';">2048 Cupcakes</div>
+    <div class="flex-item" onclick="window.location.href='/bubblepopper.html';">Bubble Popper</div>
+    <div class="flex-item" onclick="window.location.href='/getawayshootout.html';">Getaway Shootout</div>
+    <div class="flex-item" onclick="window.location.href='/ballblast.html';">Ball Blast</div>
+    <div class="flex-item" onclick="window.location.href='/worldshardestgame.html';">Worlds Hardest Game</div>
+    <div class="flex-item" onclick="window.location.href='/pandemic2.html';">Pandemic 2</div>
+    <div class="flex-item" onclick="window.location.href='/tunnelrush.html';">Tunnel Rush</div>
+    <div class="flex-item" onclick="window.location.href='/idledice.html';">Idle Dice</div>
+    <div class="flex-item" onclick="window.location.href='/basketbros.html';">Basket Bros</div>
+    <div class="flex-item" onclick="window.location.href='/miningempire.html';">Mining Empire</div>
+  </div>
+
+  <!-- JavaScript for search functionality -->
+  <script>
+    function searchGames() {
+      var input, filter, games, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      games = document.querySelectorAll('.flex-item');
+
+      games.forEach(function(game) {
+        txtValue = game.textContent || game.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          game.style.display = "";
+        } else {
+          game.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+  <!-- Hit counter -->
+  <div align='center'><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=171859&s=5' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter"></a></small></div>
 
 </body>
 </html>
-
-
-
- 
-
-
-
-
-
-
-
-
-<div align='center'><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=171859&s=5' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter"></a></small></div>
