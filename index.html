@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +10,43 @@
   <style>
     /* Centering the search bar */
     #searchInput {
-      width: 70%; /* Adjust the width as needed */
-      max-width: 400px; /* Limiting the maximum width */
-      margin: 0 auto; /* Centering horizontally */
+      width: 70%;
+      /* Adjust the width as needed */
+      max-width: 400px;
+      /* Limiting the maximum width */
+      margin: 0 auto;
+      /* Centering horizontally */
       display: block;
       padding: 10px;
       font-size: 16px;
-      border-radius: 20px; /* Making it rounder */
+      border-radius: 20px;
+      /* Making it rounder */
       border: 1px solid #ccc;
       box-sizing: border-box;
     }
+
+    /* Style for the home button */
+    #homeButton {
+      display: block;
+      margin: 20px auto;
+      /* Centering horizontally */
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    #homeButton:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
-<body>
-  <input type="text" id="searchInput" oninput="searchGames()" placeholder="Search games...">
 
+<body>
+  <!-- Home button -->
+  <a id="homeButton" href="/">Home</a>
+   <input type="text" id="searchInput" oninput="searchGames()" placeholder="Search games...">
   <!-- Your game list here -->
   <div class="flex-container">
     <div class="flex-item" onclick="window.location.href='/test.html';">1v1.Lol</div>
@@ -60,14 +84,14 @@
     <div class="flex-item" onclick="window.location.href='/idledice.html';">Idle Dice</div>
     <div class="flex-item" onclick="window.location.href='/basketbros.html';">Basket Bros</div>
     <div class="flex-item" onclick="window.location.href='/miningempire.html';">Mining Empire</div>
-     <div class="flex-item" onclick="window.location.href='/idlebreakout.html';">Idle Breakout</div>
+    <div class="flex-item" onclick="window.location.href='/idlebreakout.html';">Idle Breakout</div>
     <div class="flex-item" onclick="window.location.href='/rooftopsnipers.html';">Rooftop Snipers</div>
-     <div class="flex-item" onclick="window.location.href='/paper.io.html';">Paper.io2</div>
-     <div class="flex-item" onclick="window.location.href='/burritobison.html';">Burriot Bison </div>
+    <div class="flex-item" onclick="window.location.href='/paper.io.html';">Paper.io2</div>
+    <div class="flex-item" onclick="window.location.href='/burritobison.html';">Burriot Bison </div>
     <div class="flex-item" onclick="window.location.href='/wsop.html';">WSOP </div>
 
   </div>
-  
+
 
   <!-- JavaScript for search functionality -->
   <script>
@@ -77,7 +101,7 @@
       filter = input.value.toUpperCase();
       games = document.querySelectorAll('.flex-item');
 
-      games.forEach(function(game) {
+      games.forEach(function (game) {
         txtValue = game.textContent || game.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           game.style.display = "";
@@ -89,7 +113,11 @@
   </script>
 
   <!-- Hit counter -->
-  <div align='center'><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=171859&s=5' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter"></a></small></div>
+  <div align='center'><a href='https://www.free-website-hit-counter.com'><img
+        src='https://www.free-website-hit-counter.com/c.php?d=9&id=171859&s=5' border='0'
+        alt='Free Website Hit Counter'></a><br /><small><a href='https://www.free-website-hit-counter.com'
+        title="Free Website Hit Counter"></a></small></div>
 
 </body>
+
 </html>
